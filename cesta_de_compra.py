@@ -1,4 +1,3 @@
-
 cesta = {}
 
 seguir = True
@@ -14,10 +13,3 @@ for i, j in cesta.items(): #permite dividir los elementos de una libreria, donde
     contador += j
     print(i.capitalize(),"\t", j, "\n----------------------------------")
 print("El total a pagar es de " + str(contador),"pesos")
-
-
-
-
-
-
-
