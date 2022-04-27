@@ -14,5 +14,3 @@ for i in palabra.split():
     else:
         print("La palabra no esta disponible en el diccionario")
 
-
-
