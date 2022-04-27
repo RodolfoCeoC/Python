@@ -1,6 +1,3 @@
-# dict = {'Nombre': 'Rodolfo', 'Apellidos': 'Ceo Cortés'}
-# dict.pop('Nombre') #pop permite borrar algun elemento del diccionario, para ellos colocamos dentro del parentesis la clave de referencia,
-# print(di
 dic_facturas = {}
 pago_total = []
 bienvenidos = """
