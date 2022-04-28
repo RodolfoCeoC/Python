@@ -42,7 +42,6 @@ while seguir:
             while elementos < len(dic_facturas):
                 print("Factura",numeros[elementos],"\t", numero_2[elementos],"pesos","\n--------------------------")
                 elementos += 1
-                break
             pagar = input("Escribe el número de la factura que deseas pagar: ")
             if pagar not in dic_facturas.keys():
                 print("No se encuentra el elemento")
@@ -58,6 +57,10 @@ while seguir:
                     seguir = input("¿Desea realizar otra operación?: ") == "si"
                 else:
                     seguir = input("¿Deseas regresar al menu principal?: ") == "si"
+
+    elif selec == "3":
+        print("¡Hasta pronto!")
+        break
 
     else:
         print("_______________________________", "\n¡La opción ingresada no existe!")
