@@ -36,12 +36,12 @@ while seguir:
             print("No hay facturas disponibles, ingrese una nueva")
             seguir = input("¿Desea regresar al menú principal?: ") == "si"
         elif len(dic_facturas) != 0:
-            numeros = [str(j) for j in dic_facturas.keys()]
-            numero_2 = [str(k) for k in dic_facturas.values()]
+            numeros = [str(j) for j in dic_facturas.keys()]            #Este método permite agregar un for dentro de un while para poder
+            numero_2 = [str(k) for k in dic_facturas.values()]         #iterar todos los elementos del diccionario
             elementos = 0
-            while elementos < len(dic_facturas):
+            while elementos < len(dic_facturas):                       #para esto utilizamos un for y un while al mismo tiempo
                 print("Factura",numeros[elementos],"\t", numero_2[elementos],"pesos","\n--------------------------")
-                elementos += 1
+                elementos += 1                                         #Aquí termina este método
             pagar = input("Escribe el número de la factura que deseas pagar: ")
             if pagar not in dic_facturas.keys():
                 print("No se encuentra el elemento")
@@ -50,10 +50,10 @@ while seguir:
                 if check == "si":
                     pago = dic_facturas.get(pagar)
                     pago_total.append(pago)
-                    eliminar = dic_facturas.pop(pagar)
+                    dic_facturas.pop(pagar)
                     print("¡La factura se pagó con exito!")
-                    print("El total pagado hasta ahora es de " + str(sum(pago_total)),"pesos","y la cantidad restante es de "
-                          + str(sum(dic_facturas.values())),"pesos")
+                    print("El total pagado hasta ahora es de $" + str(sum(pago_total)),"pesos M.N","y la cantidad restante es de $"
+                          + str(sum(dic_facturas.values())),"pesos M.N")
                     seguir = input("¿Desea realizar otra operación?: ") == "si"
                 else:
                     seguir = input("¿Deseas regresar al menu principal?: ") == "si"
