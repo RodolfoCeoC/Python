@@ -29,12 +29,10 @@ while seguir:
                 break
             else:
                 print("¡La factura ya existe!")
-                seguir = input("¿Deseas volver a intentarlo?: ") == "si"
 
     elif selec == "2":
         if len(dic_facturas) == 0:
             print("No hay facturas disponibles, ingrese una nueva")
-            seguir = input("¿Desea regresar al menú principal?: ") == "si"
         elif len(dic_facturas) != 0:
             numeros = [str(j) for j in dic_facturas.keys()]            #Este método permite agregar un for dentro de un while para poder
             numero_2 = [str(k) for k in dic_facturas.values()]         #iterar todos los elementos del diccionario
@@ -54,7 +52,6 @@ while seguir:
                     print("¡La factura se pagó con exito!")
                     print("El total pagado hasta ahora es de $" + str(sum(pago_total)),"pesos M.N","y la cantidad restante es de $"
                           + str(sum(dic_facturas.values())),"pesos M.N")
-                    seguir = input("¿Desea realizar otra operación?: ") == "si"
                 else:
                     seguir = input("¿Deseas regresar al menu principal?: ") == "si"
 
@@ -64,4 +61,3 @@ while seguir:
 
     else:
         print("_______________________________", "\n¡La opción ingresada no existe!")
-        seguir = input("¿Quieres volver a intentarlo?: ") == "si"
