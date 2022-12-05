@@ -1,5 +1,4 @@
 #Juego de adivinar numeros
-#Los errores se visualizarán con la cara de mr increible
 
 import random
 
