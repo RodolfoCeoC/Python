@@ -2,12 +2,13 @@
 
 import random
 
-mensaje = """ 
-    Bievenidos al juego:
-    La mecánica consiste en adivinar números.
-    Si adivinas el número ganas ok? """
-    
-numero_aleatorio = random.randint(1, 30)
+init_num = 1   
+max_num = 30
+
+mensaje = f'Adivina el numero que está entre el {init_num} y el {max_num}'
+       
+numero_aleatorio = random.randint(init_num, max_num)
+print("\n" + mensaje + "\n")
 
 while True:
     numero = int(input("Ingresa un numero: "))
